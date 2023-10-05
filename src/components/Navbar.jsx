@@ -4,9 +4,12 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../redux/Slices/userSlice";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ isAuthenticated, user }) => {
+
+  const navigate = useNavigate()
 
   const avatarUrl = `https://ui-avatars.com/api/?name=${user?.name}&background=random&rounded=true`;
   const dispatch = useDispatch()
@@ -14,9 +17,13 @@ const Navbar = ({ isAuthenticated, user }) => {
 
   const handleLogout = async () => {
     await dispatch(logout())
-
+    localStorage.removeItem("jobApplication")
     setProfileModal(!openProfileModal);
   };
+
+  const handleProfile = () => {
+    navigate("/user")
+  }
 
   return (
     <nav className="bg-black sticky top-0 z-10">
@@ -116,6 +123,7 @@ const Navbar = ({ isAuthenticated, user }) => {
                     role="menuitem"
                     tabIndex="-1"
                     id="user-menu-item-0"
+                    onClick={handleProfile}
                   >
                     Your Profile
                   </button>
@@ -126,7 +134,7 @@ const Navbar = ({ isAuthenticated, user }) => {
                     tabIndex="-1"
                     id="user-menu-item-2"
                   >
-                    Sign out
+                    Log out
                   </button>
                 </div>
               )}

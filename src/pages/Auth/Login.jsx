@@ -41,7 +41,7 @@ const Login = () => {
                 name="email"
                 value={user.email}
                 onChange={handleInputChange}
-                className="w-full px-8 py-4 rounded-lg font-medium bg-gray-600 border border-gray-400 placeholder-gray-400 text-white text-sm focus:outline-none focus:border-gray-300 focus:bg-gray-700"
+                className="w-full px-8 py-4 rounded-lg font-medium bg-gray-600 border border-gray-400 placeholder-gray-400 text-white text-sm focus:outline-none focus:border-gray-300 "
                 type="email"
                 placeholder="Email"
               />
@@ -49,7 +49,7 @@ const Login = () => {
                 name="password"
                 value={user.password}
                 onChange={handleInputChange}
-                className="w-full px-8 py-4 rounded-lg font-medium bg-gray-600 border border-gray-400 placeholder-gray-400 text-white text-sm focus:outline-none focus:border-gray-300 focus:bg-gray-700"
+                className="w-full px-8 py-4 rounded-lg font-medium bg-gray-600 border border-gray-400 placeholder-gray-400 text-white text-sm focus:outline-none focus:border-gray-300 "
                 type="password"
                 placeholder="Password"
               />
