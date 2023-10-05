@@ -21,6 +21,8 @@ const Navbar = ({ isAuthenticated, user }) => {
     setProfileModal(!openProfileModal);
   };
 
+
+
   const handleProfile = () => {
     navigate("/user")
   }

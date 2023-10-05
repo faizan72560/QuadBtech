@@ -18,12 +18,11 @@ const Home = () => {
     setkeyword('')
   }
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className="h-full w-full flex flex-col bg-[#F3F4F6]">
 
       <div className="py-20">
         <div className="container mx-auto text-center text-white">
-          <h1 className="text-4xl font-semibold mb-4 text-black">Find Your Dream Job</h1>
-          <p className="text-lg mb-6">Explore job opportunities in your preferred programming language.</p>
+          <h1 className="text-4xl font-semibold mb-4 text-black">Start Your Job Search</h1>
           <div className="flex flex-col md:flex-row gap-4 md:w-[60%] mx-auto">
             <input
               type="text"
